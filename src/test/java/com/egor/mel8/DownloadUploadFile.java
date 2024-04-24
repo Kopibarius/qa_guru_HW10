@@ -1,5 +1,6 @@
 package com.egor.mel8;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,10 +10,11 @@ import java.io.FileReader;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DownloadUpload {
+public class DownloadUploadFile {
 
     @Test
     void downloadWithInputStream() throws Exception {
@@ -33,9 +35,17 @@ public class DownloadUpload {
         StringBuilder downloadAsString = new StringBuilder();
         try (FileReader fr = new FileReader(download, StandardCharsets.UTF_8)) {
             while ((charInDownload = fr.read()) != -1) {
-                downloadAsString.append((char)charInDownload);
+                downloadAsString.append((char) charInDownload);
             }
             Assertions.assertTrue(downloadAsString.toString().contains("Jackson Data Processor"));
         }
+    }
+
+    @Test
+    void uploadTest() {
+        Configuration.browserSize = "1920x1080";
+        open("https://tus.io/demo");
+        $("input[type='file'").uploadFromClasspath("uploadFile.txt");
+        $("p._heading_gq6c0_21").shouldHave(text("The upload is complete!")) ;
     }
 }
