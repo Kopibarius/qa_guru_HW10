@@ -10,7 +10,8 @@ import java.io.FileReader;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -46,6 +47,6 @@ public class DownloadUploadFile {
         Configuration.browserSize = "1920x1080";
         open("https://tus.io/demo");
         $("input[type='file'").uploadFromClasspath("uploadFile.txt");
-        $("p._heading_gq6c0_21").shouldHave(text("The upload is complete!")) ;
+        $(byText("The upload is complete!")).should(exist);
     }
 }
