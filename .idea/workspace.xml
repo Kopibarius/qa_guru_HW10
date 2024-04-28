@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="549a0907-c3a4-4524-a557-f66d6d40aecf" name="Changes" comment="Added XLS and PDF parsing tests, modificate upload test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/egor/mel8/ParsingCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Team.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="549a0907-c3a4-4524-a557-f66d6d40aecf" name="Changes" comment="Added CSV parsing">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/egor/mel8/Json/ParsingJSON.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/egor/mel8/Json/Stats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Egor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,9 @@
     "Gradle.DownloadUploadFile.executor": "Run",
     "Gradle.DownloadUploadFile.uploadTest.executor": "Run",
     "Gradle.PDFFile.downloadAndParsingPDF.executor": "Run",
+    "Gradle.ParsingCSV.executor": "Run",
     "Gradle.ParsingCSV.parsCSV.executor": "Run",
+    "Gradle.ParsingJSON.parsingJSON.executor": "Debug",
     "Gradle.ParsingXLS.downloadAndParsingPDF.executor": "Run",
     "Gradle.ParsingXLS.downloadAndParsingXLS.executor": "Debug",
     "Gradle.Tests in 'com.egor.mel8'.executor": "Run",
@@ -76,7 +77,7 @@
     "last_opened_file_path": "D:/Users/egorm/OneDrive/Рабочий стол/Project/HW10"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.ParsingCSV">
+  <component name="RunManager" selected="Gradle.ParsingJSON.parsingJSON">
     <configuration name="DownloadUploadFile.uploadTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -149,7 +150,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ParsingXLS.downloadAndParsingPDF" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParsingJSON.parsingJSON" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +163,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.egor.mel8.ParsingXLS.downloadAndParsingPDF&quot;" />
+            <option value="&quot;com.egor.mel8.Json.ParsingJSON.parsingJSON&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParsingCSV" />
+        <item itemvalue="Gradle.ParsingJSON.parsingJSON" />
         <item itemvalue="Gradle.ParsingCSV.parsCSV" />
+        <item itemvalue="Gradle.ParsingCSV" />
         <item itemvalue="Gradle.Tests in 'com.egor.mel8'" />
         <item itemvalue="Gradle.DownloadUploadFile.uploadTest" />
-        <item itemvalue="Gradle.ParsingXLS.downloadAndParsingPDF" />
       </list>
     </recent_temporary>
   </component>
@@ -231,11 +232,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714078890632</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added CSV parsing">
+      <option name="closed" value="true" />
+      <created>1714325858875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714325858875</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added XLS and PDF parsing tests, modificate upload test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added XLS and PDF parsing tests, modificate upload test" />
+    <MESSAGE value="Added CSV parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CSV parsing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/egor/mel8/Json/ParsingJSON.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
