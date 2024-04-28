@@ -9,12 +9,10 @@ import java.io.File;
 public class ParsingJSON {
 
     @Test
-    void parsingJSON() throws Exception{
+    void parsingJSON() throws Exception {
         File json = new File("src/test/resources/Egor.json");
         Stats stats = new ObjectMapper().readValue(json, Stats.class);
-        Assertions.assertEquals(stats.getSalaries()[2],"30 000");
-        Assertions.assertEquals(stats.getName(),"Egor");
-
-//        System.out.println();
+        Assertions.assertEquals(stats.getSalaries()[2], "30 000");
+        Assertions.assertEquals(stats.getName(), "Egor");
     }
 }
